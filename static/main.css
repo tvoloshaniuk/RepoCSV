@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#chart {
+    margin-top: 50px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    margin-top: 50px;	
+}

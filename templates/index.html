@@ -1,13 +1,66 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>55DPR, Tymofii Voloshaniuk, CSV Data Visualization</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>CSV Data Visualization</h1>-->
+
+<!--<div id="chart">-->
+<!--    <form method="post" enctype="multipart/form-data">-->
+<!--        <input type="file" name="file">-->
+<!--        <input type="submit" value="Upload">-->
+<!--    </form>-->
+<!--</div>-->
+
+<!--{% if error_message %}-->
+<!--<script>-->
+<!--   alert('{{ error_message }}');-->
+
+<!--</script>-->
+<!--{% endif %}-->
+
+<!--<div id="chart-container">-->
+<!--    <canvas id="chart-canvas"></canvas>-->
+<!--</div>-->
+
+<!--<script src="{{ url_for('static', filename='chart.js') }}"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+55DPR, Voloshaniuk Tymofii, 77587
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Glitch test</title>
+    <title>CSV Data Visualization</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdn.pygal.org/2.4.0/pygal.css">
 </head>
 <body>
-	<h1>Hello, world!</h1>
-	<h2>Current time is {{ now }}</h2>
-  <h3>
-    I am Indian Pythonista
-  </h3>
+    <h1>CSV Data Visualization</h1>
+
+    <div id="chart">
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    {% if chart_url %}
+        <img src="{{ chart_url }}" alt="Graph">
+    {% endif %}
+
+    {% if error_message %}
+        <script>
+            alert('{{ error_message }}');
+        </script>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='chart.js') }}"></script>
+    <script src="https://cdn.pygal.org/2.4.0/pygal.min.js"></script>
 </body>
 </html>
+
+
+
